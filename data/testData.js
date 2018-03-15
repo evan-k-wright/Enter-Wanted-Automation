@@ -22,5 +22,4 @@ module.exports = {
     lic : 'WW000W',
     lis : 'UT',
     liy : '2017',
-
 }

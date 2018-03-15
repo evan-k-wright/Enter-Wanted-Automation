@@ -1,4 +1,6 @@
 const data = require('../data/testData')
+const functions = require('../data/functions')
+const selectors = require('../data/selectors')
 module.exports = {
     beforeEach : browser => {
         browser.url('https://devmountain-qa.github.io/enter-wanted/1.4_Assignment/index.html')
@@ -8,15 +10,15 @@ module.exports = {
         
     },
     'Testing All Fields' : browser => {
-        browser
         //Header, MKE, Originating Agency Identifier
-            .setValue('input[name="hdrInput"]' , data.hdr)     
-            .setValue('input[name="mkeInput"]' , data.mke)
-            .setValue('input[name="oriInput"]' , data.ori)
+            functions.inputs(browser, selectors.hdr, data.hdr)
+            functions.inputs(browser, selectors.mke, data.mke)
+            functions.inputs(browser, selectors.ori, data.ori)
         //Name, Sex, Race
-            .setValue('input[name="namInput"]' , data.nam)
-            .setValue('input[name="sexInput"]' , data.sex)
-            .setValue('input[name="racInput"]' , data.rac)
+            functions.inputs(browser, selectors.nam, data.nam)
+            functions.inputs(browser, selectors.sex, data.sex)
+            functions.inputs(browser, selectors.rac, data.rac)
+        browser
         //Height, Weight, Hair
             .setValue('input[name="hgtInput"]' , data.hgt)
             .setValue('input[name="wgtInput"]' , data.wgt)
