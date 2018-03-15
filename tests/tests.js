@@ -1,3 +1,4 @@
+const data = require('../data/testData')
 module.exports = {
     beforeEach : browser => {
         browser.url('https://devmountain-qa.github.io/enter-wanted/1.4_Assignment/index.html')
@@ -9,24 +10,24 @@ module.exports = {
     'Testing All Fields' : browser => {
         browser
         //Header, MKE, Originating Agency Identifier
-            .setValue('input[name="hdrInput"]' , 'Evan Wanted')     
-            .setValue('input[name="mkeInput"]' , 'E@W#')
-            .setValue('input[name="oriInput"]' , '123456789')
+            .setValue('input[name="hdrInput"]' , data.hdr)     
+            .setValue('input[name="mkeInput"]' , data.mke)
+            .setValue('input[name="oriInput"]' , data.ori)
         //Name, Sex, Race
-            .setValue('input[name="namInput"]' , 'Evan Wright')
-            .setValue('input[name="sexInput"]' , 'M')
-            .setValue('input[name="racInput"]' , 'W')
+            .setValue('input[name="namInput"]' , data.nam)
+            .setValue('input[name="sexInput"]' , data.sex)
+            .setValue('input[name="racInput"]' , data.rac)
         //Height, Weight, Hair
-            .setValue('input[name="hgtInput"]' , '511')
-            .setValue('input[name="wgtInput"]' , '195')
-            .setValue('input[name="haiInput"]' , 'BLN')
+            .setValue('input[name="hgtInput"]' , data.hgt)
+            .setValue('input[name="wgtInput"]' , data.wgt)
+            .setValue('input[name="haiInput"]' , data.hai)
         //Offense, Date of Warrant/Violation
-            .setValue('input[name="offInput"]' , 'Unpaid Tickets')
-            .setValue('input[name="dowInput"]' , '02042017')
+            .setValue('input[name="offInput"]' , data.off)
+            .setValue('input[name="dowInput"]' , data.dow)
         //Drivers License, DL State, DL Expiration Date
-            .setValue('input[name="olnInput"]' , 'EW123456')
-            .setValue('input[name="olsInput"]' , 'UT')
-            .setValue('input[name="olyInput"]' , '03232017')
+            .setValue('input[name="olnInput"]' , data.oln)
+            .setValue('input[name="olsInput"]' , data.ols)
+            .setValue('input[name="olyInput"]' , data.oly)
         //License Plate, License State, License Year
             .setValue('input[name="licInput"]' , 'WW000W')
             .setValue('input[name="lisInput"]' , 'UT')
