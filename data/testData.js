@@ -19,6 +19,8 @@ module.exports = {
     ols : 'UT',
     oly : '03232017',
 //License Plate, License State, License Year
-    
+    lic : 'WW000W',
+    lis : 'UT',
+    liy : '2017',
 
 }

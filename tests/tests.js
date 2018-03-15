@@ -29,9 +29,9 @@ module.exports = {
             .setValue('input[name="olsInput"]' , data.ols)
             .setValue('input[name="olyInput"]' , data.oly)
         //License Plate, License State, License Year
-            .setValue('input[name="licInput"]' , 'WW000W')
-            .setValue('input[name="lisInput"]' , 'UT')
-            .setValue('input[name="liyInput"]' , '2017')
+            .setValue('input[name="licInput"]' , data.lic)
+            .setValue('input[name="lisInput"]' , data.lis)
+            .setValue('input[name="liyInput"]' , data.liy)
         //Submit button and Query
             .click('button[id="saveBtn"]')
             .expect.element('span[name="queryBody"]').text.to.equals('Evan Wanted.E@W#.123456789.Evan Wright.M.W.511.195.BLN.Unpaid Tickets.02042017.EW123456.UT.03232017.WW000W.UT.2017')
